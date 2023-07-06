@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     # 署名付きURLを取得
     get_url = s3_client.generate_presigned_url(
         ClientMethod='get_object',
-        Params={'Bucket': bucket_name, 'Key': 'test_pdf.pdf'},
+        Params={'Bucket': bucket_name, 'Key': 'test.pptx'},
         ExpiresIn=600,
         HttpMethod='GET'
     )
